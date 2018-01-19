@@ -76,11 +76,15 @@ describe('Queue', function() {
     it('Peek should look at the first item in line without removing it', function() {
       myQueue.enqueue('a');
       myQueue.enqueue('b');
-      myQueue.peek().should.equal('a');
+    //  myQueue.peek().should.equal('a');
+    var item = myQueue.peek();
+    should.equal(item)
       myQueue.dequeue().should.equal('a');
     });
     it('Peek should return null if no items are in the queue', function() {
-      myQueue.peek().should.equal(null);
+      //myQueue.peek().should.equal(null);
+      var stuff = myQueue.peek();
+      should.equal(stuff,null);
     });
   });
 });
